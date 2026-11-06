@@ -35,7 +35,7 @@ def generate_answer(query: str, chunks: list[dict]) -> str:
     ]
 
     response = get_client().chat.completions.create(
-        model="llama-3.1-8b-instant",
+        model="openai/gpt-oss-20b",
         messages=messages,
         temperature=0.1,
         max_tokens=500
